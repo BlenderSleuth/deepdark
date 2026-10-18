@@ -1,12 +1,14 @@
 { pkgs, ... }:
 
 {
-  packages = [ pkgs.git ];
+  packages = [
+    pkgs.git
+    pkgs.cargo-binutils
+  ];
 
   languages.rust = {
     enable = true;
     channel = "nightly";
-    # rust-src is needed for -Zbuild-std (no prebuilt std for the Wii target)
-    components = [ "rustc" "cargo" "clippy" "rustfmt" "rust-analyzer" "rust-src" ];
+    components = [ "rustc" "cargo" "clippy" "rustfmt" "rust-analyzer" "rust-src" "llvm-tools" ];
   };
 }

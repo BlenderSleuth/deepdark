@@ -1,0 +1,8 @@
+[build]
+target = "powerpc-wii-eabi.json"
+rustflags = ["-C", "link-arg=-Tlink.ld"]
+
+[unstable]
+build-std = ["core", "alloc"]
+build-std-features = ["compiler-builtins-mem"]
+json-target-spec = true
