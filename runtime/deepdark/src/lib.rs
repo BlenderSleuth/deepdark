@@ -1,10 +1,9 @@
 #![no_std]
+#![no_main]
+
+core::arch::global_asm!(include_str!("start.s"));
 
 #[panic_handler]
 fn panic(_info: &core::panic::PanicInfo) -> ! {
     loop {}
-}
-
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
 }

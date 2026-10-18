@@ -1,6 +1,8 @@
 use std::env;
+use std::path::PathBuf;
 
 fn main() {
-    println!("cargo::rustc-link-search={}", env::var("OUT_DIR").unwrap());
+    let manifest_dir = PathBuf::from(env::var("CARGO_MANIFEST_DIR").unwrap());
+    println!("cargo:rustc-link-search=native={}", manifest_dir.display());
     println!("cargo::rerun-if-changed=link.ld");
 }

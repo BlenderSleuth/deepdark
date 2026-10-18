@@ -48,3 +48,6 @@ rustc-ice-*.txt
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
+
+# Our extra outputs
+star.map

@@ -14,5 +14,6 @@
   "linker": "rust-lld",
   "linker-flavor": "gnu-lld",
   "executables": true,
+  "exe-suffix": ".elf",
   "disable-redzone": true
 }

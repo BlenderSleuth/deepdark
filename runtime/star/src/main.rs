@@ -1,5 +1,5 @@
 #![no_std]
+#![no_main]
 
 use deepdark as _;
 
-fn main() {}
